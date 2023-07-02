@@ -1,38 +1,99 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+  --primary-clr: #61dafb;
+  --secondary-clr: #282c34;
+}
+
+body {
+  background: var(--secondary-clr);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins';
+  color: #fff;
+}
+
+
+.navbar {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  border-bottom: 1px solid var(--primary-clr);
+  padding: 20px 0;
+}
+
+.title {
+  padding: 0 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title p,
+.title h2 {
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title p {
+  color: var(--primary-clr);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper {
+  display: grid;
+  place-content: center;
+  border-top: 1px solid var(--primary-clr);
+  width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: grid;
+  place-content: center;
+  padding: 15px 0;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container input {
+  color: var(--primary-clr);
+  padding: 0 7px;
+  height: 30px;
+  width: 180px;
+  border: 1px solid var(--primary-clr);
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  background: none;
+  outline: none;
+  margin: 20px 0 10px;
+}
+
+.container button {
+  color: var(--secondary-clr);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--primary-clr);
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.todo {
+  text-align: start;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  z-index: 10;
+  position: fixed;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid var(--primary-clr);
+  width: 100vw;
+  bottom: 0;
+  padding: 7px 0;
+  text-align: center;
+}
+
+footer p span {
+  color: var(--primary-clr);
 }
